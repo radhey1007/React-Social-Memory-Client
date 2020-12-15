@@ -15,7 +15,8 @@ export  const getPosts = () => async (dispatch) => {
 export const createPost = (post) => async (dispatch) => {
     try {
         const { data } = await api.createPost(post);  
-        dispatch({type:CREATE, 'payload':data}); 
+        dispatch({type:CREATE, 'payload':data});
+        alert('Memory created successfully...')
     } catch (error) {
         console.log(error);
     }
@@ -25,6 +26,7 @@ export const updatePost = (currentId , post) => async (dispatch) => {
     try {
         const { data } = await api.updatePost(currentId , post); 
         dispatch({type:UPDATE, 'payload':data}); 
+        alert('Memory updated successfully...')
     } catch (error) {
         console.log(error);
     }

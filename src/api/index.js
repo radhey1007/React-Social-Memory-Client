@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/posts';
+// const url = 'http://localhost:5000/posts';    // for locally 
 
+const url = 'https://social-memory.herokuapp.com/posts';  // for heroku deployement
 
 export const fetchPosts = () => axios.get(url);
 
